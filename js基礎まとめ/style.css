@@ -1,0 +1,34 @@
+.menuButton{
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+.buttonLine{
+  background-color: #000;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+}
+.buttonLine:nth-child(1){
+  top: 0;
+}
+.buttonLine:nth-child(2){
+  top: 50%;
+  transform: translateY(-50%);
+}
+.buttonLine:nth-child(3){
+  bottom: 0;
+}
+.active .buttonLine:nth-child(1){
+  transform: rotate(45deg) translateY(-50%);
+  top: 50%;
+}
+.active .buttonLine:nth-child(2){
+  opacity: 0;
+  visibility: hidden;
+}
+.active .buttonLine:nth-child(3){
+  transform: rotate(-45deg) translateY(50%);
+  bottom: 50%;
+}
